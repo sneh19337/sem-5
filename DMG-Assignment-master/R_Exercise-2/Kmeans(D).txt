@@ -1,0 +1,4 @@
+A FALSE : EM as it is based on probability of a value falling in a cluster is soft but Kmeans is hard it is based on distanse
+B FALSE : EM produce ellipsoidal which is a good model while Kmeans can produce circular buckets as it is based on mean 
+C FALSE : EM is based on probability but Kmeans on distance from mean.
+D FALSE : EM follow gaussian/Normal as it do consider other attribute in claculatinf for one.

@@ -1,0 +1,6 @@
+Links:-
+http://www.philippe-fournier-viger.com/spmf/index.php?link=documentation.php#growth
+http://www.philippe-fournier-viger.com/spmf/how_to_install.txt
+
+Command;-
+java -jar spmf.jar run FPGrowth_itemsets contextPasquier99.txt output.txt 40% 

@@ -1,0 +1,84 @@
+#m1=0;
+#m2=0;
+#m3=0;
+#m4=0;
+
+#for(i in 1:nrow(mydata))
+#{
+#	for(j in 1:nrow(mydata))
+#	{
+#		m<-dist(rbind(mydata[i,], mydata[j,]));
+#		if(m1<m){
+#			m1=m;
+#		}else if(m1>m && m2<m){
+#			m2=m;	
+#		}else if(m2>m && m3<m){
+#			m3=m;
+#		}else if(m3>m && m4<m){
+#			m4=m;
+#		}
+#	}
+#}
+
+#r1=m1;
+#r2=m4;
+
+#m3=99999;
+#m2=99999;
+#m4=99999;
+#m5=99999;
+
+#for(i in 1:nrow(mydata))
+#{
+#	for(j in 1:nrow(mydata))
+#	{
+#		m<-dist(rbind(mydata[i,], mydata[j,]));
+#		if(m3>m){
+#			m3=m;
+#		}else if(m3<m && m2>m){
+#			m2=m;	
+#		}else if(m2<m && m4>m){
+#			m4=m;
+#		}else if(m4<m && m5>m){
+#			m5=m;
+#		}
+#	}
+#}
+
+#r3=m3;
+#r4=m5;
+
+#print(r1);
+#print(r2);
+#print(r3);
+#print(r4);
+
+
+
+
+Partition<-function(k1,k2,k3,k4,mydata,C1,C2,C3,C4)
+{
+for(i in 1:nrow(mydata))
+{
+
+		
+		D1=dist(rbind(mydata[i,],k1));
+		D2=dist(rbind(mydata[i,],k2));
+		D3=dist(rbind(mydata[i,],k3));
+		D4=dist(rbind(mydata[i,],k4));
+		Min1=min(D1,D2,D3,D4);
+		
+
+		if(Min1==D1){
+			C1<-rbind(C1,mydata[i,]);
+		}else if(Min1==D2){
+			C2<-rbind(C2,mydata[i,]);
+		}else if(Min1==D3){
+			C3<-rbind(C3,mydata[i,]);
+		}else{
+			C4<-rbind(C4,mydata[i,]);
+		}
+		
+}
+
+}
